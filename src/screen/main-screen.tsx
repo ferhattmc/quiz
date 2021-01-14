@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Wizard } from 'src/components/wizard';
 import { Step } from 'src/model/Step';
 import FirstSection from 'src/section/first-section';
+import SecondSection from 'src/section/second-section';
 import './style.css';
 
 interface MainScreenProps {
@@ -58,7 +59,9 @@ export default class MainScreen extends Component<MainScreenProps, MainScreenSta
                 {this.state.pageNumber === 0 &&
                     <FirstSection />
                 }
-                { this.state.pageNumber === 1 && <div>2.Sayfa</div>}
+                { this.state.pageNumber === 1 &&
+                    <SecondSection />
+                }
                 { this.state.pageNumber === 2 && <div>3.Sayfa</div>}
             </>;
 
